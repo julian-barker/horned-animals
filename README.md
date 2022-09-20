@@ -30,11 +30,11 @@ Actual time needed to complete: 31 min
 
 Estimate of time needed to complete: 30 min
 
-Start time: 
+Start time: 1340
 
-Finish time: 
+Finish time: 1415
 
-Actual time needed to complete: 
+Actual time needed to complete: 35 min (doesn't look very good)
 
 ### Feature #4: Deploy to Netlify
 
