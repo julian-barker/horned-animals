@@ -1,16 +1,5 @@
 import React from "react";
-
-class HornedBeast extends React.Component {
-  render() {
-    return(
-      <div>
-        <h2>{this.props.title}</h2>
-        <img src={this.props.src} alt={this.props.title} />
-        <p>{this.props.description}</p>
-      </div>
-    )
-  }
-} 
+import HornedBeast from './HornedBeast.js';
 
 
 class Main extends React.Component {
@@ -24,7 +13,7 @@ class Main extends React.Component {
                 src={el.image_url}
                 title={el.title}
                 description={el.description}
-                key={el.keyword}
+                key={el._id}
               />
             )
           })

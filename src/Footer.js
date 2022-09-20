@@ -3,7 +3,7 @@
 function Footer() {
   return(
     <footer>
-      Julian Barker
+      &copy; Julian Barker
     </footer>
   );
 }
