@@ -40,8 +40,8 @@ Actual time needed to complete: 35 min (doesn't look very good)
 
 Estimate of time needed to complete: 20 min
 
-Start time: 
+Start time: 1417
 
-Finish time: 
+Finish time: 1420
 
-Actual time needed to complete: 
+Actual time needed to complete: 3 min
