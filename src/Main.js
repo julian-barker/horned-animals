@@ -1,34 +1,26 @@
 import React from "react";
-
-class HornedBeast extends React.Component {
-  render() {
-    return(
-      <div>
-        <h2>{this.props.title}</h2>
-        <img src={this.props.src} alt={this.props.title} />
-        <p>{this.props.description}</p>
-      </div>
-    )
-  }
-} 
+import HornedBeast from './HornedBeast.js';
 
 
 class Main extends React.Component {
   render() {
     return (
-      <main>
-        {
-          this.props.beasts.map( el => {
-            return (
-              <HornedBeast 
-                src={el.image_url}
-                title={el.title}
-                description={el.description}
-                key={el.keyword}
-              />
-            )
-          })
-        }
+      <main className="container-fluid" >
+        <div className="row row-cols-auto justify-content-between g-4" >
+          {
+            this.props.beasts.map( el => {
+              return (
+                <HornedBeast 
+                  src={el.image_url}
+                  title={el.title}
+                  description={el.description}
+                  key={el._id}
+                  className="col-4"
+                />
+              )
+            })
+          }
+        </div>
       </main>
     );
   }
