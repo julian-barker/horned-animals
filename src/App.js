@@ -31,7 +31,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <Header />
+        <Header className='display-1' />
         <SelectedBeast
           title={this.state.selected.title}
           src={this.state.selected.image_url}

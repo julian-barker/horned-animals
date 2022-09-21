@@ -1,6 +1,6 @@
 import React from "react";
 import HornedBeast from './HornedBeast.js';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import SearchFilter from "./SearchFilter.js";
 
 
@@ -99,8 +99,6 @@ class Main extends React.Component {
     const hornFilter = this.state.hornFilter;
     const re = this.state.searchVal;
     console.log(re);
-    // const temp = (hornFilter === 'all' ? this.state.beasts : this.state.beasts.filter(beast => beast.horns.toString() === hornFilter))
-    //   .filter(beast => beast.title.toLowerCase().match(this.state.searchVal) || beast.keyword.toLowerCase().match(this.state.searchVal));
     const temp = (hornFilter === 'all' ? this.state.beasts : this.state.beasts.filter(beast => beast.horns.toString() === hornFilter))
       .filter(beast => beast.title.match(re) || beast.keyword.match(re));
     return (
@@ -114,15 +112,12 @@ class Main extends React.Component {
     const set = [...new Set(this.state.beasts.map(beast => beast.horns))];
     return (
       <main className="container-fluid" >
-        <Button variant="primary" onClick={this.sortByHorns}>Sort by Number of Horns</Button>
+        {/* <Button variant="primary" onClick={this.sortByHorns}>Sort by Number of Horns</Button>
         <Button variant="primary" onClick={this.sortByLikes}>Sort by Popularity</Button>
         <Button variant="primary" onClick={this.sortByTitle}>Sort Alphabetically</Button>
-        <Button variant="primary" onClick={this.sortById}>Reset to Default</Button>
+        <Button variant="primary" onClick={this.sortById}>Reset to Default</Button> */}
         <SearchFilter sortBy={this.sortBy} filterBy={this.filterBy} fuzzySearch={this.fuzzySearch} horns={set} />
         {this.renderBeasts()}
-        {/* <div className="row row-cols-auto justify-content-evenly g-4" >
-          { this.state.beasts.map( beast => this.renderBeast(beast) ) }
-        </div> */}
       </main>
     );
   }
