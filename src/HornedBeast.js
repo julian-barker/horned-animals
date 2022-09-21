@@ -5,21 +5,26 @@ import Card from 'react-bootstrap/Card';
 class HornedBeast extends React.Component {
   
   handleClick = () => {
-    this.props.click(this.props.id);
+    this.props.click(this.props.beast._id);
   }
 
   render() {
-    const compact = `💛 ${new Intl.NumberFormat({notation: 'compact'}).format(this.props.likes)}`;
-    console.log(compact);
-    const likes = this.props.likes === 0 ? '💔' : this.props.likes < 20 ? '💛'.repeat(this.props.likes) : compact;
+    const likes = this.props.beast.likes;
+    const compact = `💛 ${new Intl.NumberFormat('en-US', {notation: 'compact', maximumSignificantDigits: 3}).format(likes)}`;
+    const likesDisplay = likes === 0 ? '💔' : likes < 10 ? '💛'.repeat(likes) : compact;
     return(
       <Card style={{ width: '18rem' }} >
-        <Card.Img variant="top" src={this.props.src} alt={this.props.title} />
+        <Card.Img 
+          variant="top" 
+          src={this.props.beast.image_url} 
+          alt={this.props.beast.title} 
+          onClick={() => {
+            this.props.modalClick(true, this.props.beast);
+        }} />
         <Card.Body>
-          <Card.Title>{this.props.title}</Card.Title>
-          <Card.Text>{this.props.description}</Card.Text>
-          {/* <Card.Text>❤'s: {'💛'.repeat(this.props.likes)}</Card.Text> */}
-          <Card.Text>{likes}</Card.Text>
+          <Card.Title>{this.props.beast.title}</Card.Title>
+          <Card.Text>{this.props.beast.description}</Card.Text>
+          <Card.Text>{likesDisplay}</Card.Text>
           <Button variant="primary" onClick={this.handleClick}>Favorite</Button>
         </Card.Body>
       </Card>

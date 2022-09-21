@@ -45,3 +45,33 @@ Start time: 1417
 Finish time: 1420
 
 Actual time needed to complete: 3 min
+
+### Feature #5: Modal
+
+Estimate of time needed to complete: 30 min
+
+Start time: 2030
+
+Finish time: 2120
+
+Actual time needed to complete: 50 min
+
+### Feature #6: Fuzzy Search
+
+Estimate of time needed to complete: 40 min
+
+Start time: 1315
+
+Finish time: 1430
+
+Actual time needed to complete: 1hr 15min
+
+### Feature #7: Filter by Horns
+
+Estimate of time needed to complete: 1 hr
+
+Start time: 1220
+
+Finish time: 1300
+
+Actual time needed to complete: 40 min
