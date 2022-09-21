@@ -9,9 +9,9 @@ class HornedBeast extends React.Component {
   }
 
   render() {
-    const compact = `💛s: ${new Intl.NumberFormat({notation: 'compact'}).format(this.props.likes)}`;
+    const compact = `💛 ${new Intl.NumberFormat({notation: 'compact'}).format(this.props.likes)}`;
     console.log(compact);
-    const likes = this.props.likes === 0 ? 'No 💛s' : this.props.likes < 20 ? '💛'.repeat(this.props.likes) : compact;
+    const likes = this.props.likes === 0 ? '💔' : this.props.likes < 20 ? '💛'.repeat(this.props.likes) : compact;
     return(
       <Card style={{ width: '18rem' }} >
         <Card.Img variant="top" src={this.props.src} alt={this.props.title} />
@@ -26,5 +26,6 @@ class HornedBeast extends React.Component {
     );
   }
 }
+
 
 export default HornedBeast;
