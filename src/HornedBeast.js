@@ -13,7 +13,7 @@ class HornedBeast extends React.Component {
     const compact = `💛 ${new Intl.NumberFormat('en-US', {notation: 'compact', maximumSignificantDigits: 3}).format(likes)}`;
     const likesDisplay = likes === 0 ? '💔' : likes < 10 ? '💛'.repeat(likes) : compact;
     return(
-      <Card style={{ width: '18rem' }} >
+      <Card style={{ width: '18rem' }} className='px-0' >
         <Card.Img 
           variant="top" 
           src={this.props.beast.image_url} 
@@ -21,11 +21,14 @@ class HornedBeast extends React.Component {
           onClick={() => {
             this.props.modalClick(true, this.props.beast);
         }} />
-        <Card.Body>
+        <Card.Body className='d-flex flex-column' >
           <Card.Title>{this.props.beast.title}</Card.Title>
           <Card.Text>{this.props.beast.description}</Card.Text>
-          <Card.Text>{likesDisplay}</Card.Text>
-          <Button variant="primary" onClick={this.handleClick}>Favorite</Button>
+          <Card.Text className='mt-auto' >{likesDisplay}</Card.Text>
+          <Button 
+            variant="primary"
+            onClick={this.handleClick}
+          >Favorite</Button>
         </Card.Body>
       </Card>
     );

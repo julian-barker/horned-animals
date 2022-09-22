@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Nabla&display=swap');
 
+$font-family-monospace: 'Fira Code', monospace;
+$font-family-sans-serif: 'Nabla', cursive;
 $primary: #c371f3;
-$secondary: #ffd70e;
+$secondary: #fd89ee;
 
 @import "../node_modules/bootstrap/scss/bootstrap";

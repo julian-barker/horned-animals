@@ -16,7 +16,7 @@ class SearchFilter extends React.Component {
   render() {
     
     return (
-      <Form className='row m-5' >
+      <Form className='row m-5 bg-light py-2' >
         <div className='col' >
           <Form.Select 
             aria-label="Filter"

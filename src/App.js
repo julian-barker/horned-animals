@@ -30,7 +30,7 @@ class App extends React.Component {
   render() {
 
     return (
-      <div className="App">
+      <div className="App container-fluid d-flex flex-column gap-6 bg-dark">
         <Header />
         <SelectedBeast
           title={this.state.selected.title}

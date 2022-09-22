@@ -1,6 +1,5 @@
 import React from "react";
 import HornedBeast from './HornedBeast.js';
-// import Button from 'react-bootstrap/Button';
 import SearchFilter from "./SearchFilter.js";
 
 
@@ -111,7 +110,7 @@ class Main extends React.Component {
   render() {
     const set = [...new Set(this.state.beasts.map(beast => beast.horns))];
     return (
-      <main className="container-fluid" >
+      <main className="container bg-secondary font-monospace rounded" >
         {/* <Button variant="primary" onClick={this.sortByHorns}>Sort by Number of Horns</Button>
         <Button variant="primary" onClick={this.sortByLikes}>Sort by Popularity</Button>
         <Button variant="primary" onClick={this.sortByTitle}>Sort Alphabetically</Button>
